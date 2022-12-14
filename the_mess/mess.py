@@ -38,11 +38,14 @@ def home ():
     return "<h1>Hi</h1>"
 
 
-@app.route('/')
-def basic():
-    return "hi"
-	# return render_template("base.html")
+# @app.route('/')
+# def basic():
+#     # return "hi"
+# 	return render_template("base.html")
 
+@app.route('/home')
+def homy():
+    return render_template('base.html')
 
 @app.route('/', subdomain ='sub1')
 def sub1h():
