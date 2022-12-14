@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 # from plyer import notification
 
@@ -40,7 +40,8 @@ def home ():
 
 @app.route('/')
 def basic():
-	return "home for domain"
+    return "hi"
+	# return render_template("base.html")
 
 
 @app.route('/', subdomain ='sub1')
